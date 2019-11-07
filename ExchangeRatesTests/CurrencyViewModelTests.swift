@@ -25,6 +25,8 @@ class CurrencyViewModelTests: XCTestCase {
     private var flowDelegate: TestCoordinatorFlowDelegate!
 
     override func setUp() {
+        super.setUp()
+
         delegate = TestClassCurrencyViewModelDelegate()
         flowDelegate = TestClassCoordinatorFlowDelegate()
     }
@@ -32,6 +34,8 @@ class CurrencyViewModelTests: XCTestCase {
     override func tearDown() {
         delegate = nil
         flowDelegate = nil
+
+        super.tearDown()
     }
 
     func testFetchCurrencyListCallback() {
@@ -96,8 +100,7 @@ class CurrencyViewModelTests: XCTestCase {
                      ExchangeRateUseCase(from: "AUD", to: "USD")]
         let currencies = rates.map { $0.currencies }
 
-        let viewModel = makeViewModel(comparedCurrencies: currencies,
-                                      canPushViewControllers: true)
+        let viewModel = makeViewModel(comparedCurrencies: currencies)
 
         delegate.didRetrieve = {
             retrievedExpectation.fulfill()

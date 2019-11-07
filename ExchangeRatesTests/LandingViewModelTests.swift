@@ -17,6 +17,8 @@ class LandingViewModelTests: XCTestCase {
     private var flowDelegate: TestCoordinatorFlowDelegate!
 
     override func setUp() {
+        super.setUp()
+
         coreDataService = CoreDataServiceMock()
         apiService = APIServiceMock()
 
@@ -35,6 +37,8 @@ class LandingViewModelTests: XCTestCase {
         viewModel = nil
         delegate = nil
         flowDelegate = nil
+
+        super.tearDown()
     }
 
     func testNumberOfItems() {

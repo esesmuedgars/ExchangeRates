@@ -99,13 +99,12 @@ class LandingViewController: UIViewController, LandingViewModelDelegate, UITable
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
-        case 0:
+        if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(AddCurrencyCell.self, for: indexPath)
             cell.configure(titleText: viewModel.addCurrencyCellTitle)
 
             return cell
-        default:
+        } else {
             let cell = tableView.dequeueReusableCell(ExchangeRateCell.self, for: indexPath)
 
             let rate = viewModel.exchangeRateItem(at: indexPath)
