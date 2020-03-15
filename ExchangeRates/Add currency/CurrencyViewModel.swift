@@ -25,7 +25,7 @@ class CurrencyViewModel: CurrencyViewModelType {
     }
 
     var numberOfCurrencies: Int {
-        return currencies.count
+        currencies.count
     }
 
     private var selectedCurrencyIndex: Int?

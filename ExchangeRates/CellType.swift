@@ -14,11 +14,11 @@ protocol CellType {
 
 extension CellType {
     private static var className: String {
-        return String(describing: self)
+        String(describing: self)
     }
 
     static var identifier: String {
-        return className
+        className
     }
 
     static var nib: UINib? {

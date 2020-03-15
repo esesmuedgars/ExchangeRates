@@ -29,22 +29,22 @@ extension UIColor {
 
     /// #191C1F
     static var revolutBlack: UIColor {
-        return #colorLiteral(red: 0.09803921569, green: 0.1098039216, blue: 0.1215686275, alpha: 1)
+        #colorLiteral(red: 0.09803921569, green: 0.1098039216, blue: 0.1215686275, alpha: 1)
     }
 
     /// #0075EB
     static var revolutBlue: UIColor {
-        return #colorLiteral(red: 0, green: 0.4588235294, blue: 0.9215686275, alpha: 1)
+        #colorLiteral(red: 0, green: 0.4588235294, blue: 0.9215686275, alpha: 1)
     }
 
     /// #8B959E
     static var revolutGray: UIColor {
-        return #colorLiteral(red: 0.5450980392, green: 0.5843137255, blue: 0.6196078431, alpha: 1)
+        #colorLiteral(red: 0.5450980392, green: 0.5843137255, blue: 0.6196078431, alpha: 1)
     }
 
     /// #F6F5F8
     static var revolutLightGray: UIColor {
-        return #colorLiteral(red: 0.9654909968, green: 0.9606856704, blue: 0.9735022187, alpha: 1)
+        #colorLiteral(red: 0.9654909968, green: 0.9606856704, blue: 0.9735022187, alpha: 1)
     }
 }
 
@@ -52,7 +52,7 @@ extension Notification.Name {
     static let currencyHasBeenSelected = Notification.Name("CurrencyHasBeenSelected")
 
     static var applicationWillTerminate: Notification.Name {
-        return UIApplication.willTerminateNotification
+        UIApplication.willTerminateNotification
     }
 }
 
@@ -72,6 +72,6 @@ extension String {
 
 extension IndexPath {
     static var zero: IndexPath {
-        return IndexPath(row: 0, section: 0)
+        IndexPath(row: 0, section: 0)
     }
 }

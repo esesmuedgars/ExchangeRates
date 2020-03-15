@@ -34,7 +34,7 @@ class LandingViewModel: LandingViewModelType {
     private(set) var rates = [ExchangeRate]()
 
     var numberOfItems: Int {
-        return rates.isEmpty ? 1 : rates.count + 1
+        rates.isEmpty ? 1 : rates.count + 1
     }
 
     private lazy var timer: Timer = {
@@ -169,7 +169,7 @@ class LandingViewModel: LandingViewModelType {
     }
 
     func index(from indexPath: IndexPath) -> Int {
-        return indexPath.row - 1 < 0 ? 0 : indexPath.row - 1
+        indexPath.row - 1 < 0 ? 0 : indexPath.row - 1
     }
 
     func exchangeRateItem(at indexPath: IndexPath) -> UIExchangeRate {
@@ -201,9 +201,9 @@ class LandingViewModel: LandingViewModelType {
 
 fileprivate extension ExchangeRate {
     var ui: ExchangeRateUseCase? {
-        return ExchangeRateUseCase(identifier: identifier,
-                                   from: fromCurrency,
-                                   to: toCurrency,
-                                   rate: rate)
+        ExchangeRateUseCase(identifier: identifier,
+                            from: fromCurrency,
+                            to: toCurrency,
+                            rate: rate)
     }
 }

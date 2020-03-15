@@ -95,7 +95,7 @@ class LandingViewController: UIViewController, LandingViewModelDelegate, UITable
     // MARK: - UITableViewDataSource
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfItems
+        viewModel.numberOfItems
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -119,7 +119,7 @@ class LandingViewController: UIViewController, LandingViewModelDelegate, UITable
     }
 
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return indexPath != .zero
+        indexPath != .zero
     }
 
     // MARK: - UITableViewDelegate

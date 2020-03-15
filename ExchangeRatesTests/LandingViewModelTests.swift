@@ -19,16 +19,23 @@ class LandingViewModelTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        coreDataService = CoreDataServiceMock()
-        apiService = APIServiceMock()
+        let coreDataService = CoreDataServiceMock()
+        self.coreDataService = coreDataService
+        
+        let apiService = APIServiceMock()
+        self.apiService = apiService
+        
+        let delegate = TestClassLandingViewModelDelegate()
+        self.delegate = delegate
+        
+        let flowDelegate = TestClassCoordinatorFlowDelegate()
+        self.flowDelegate = flowDelegate
 
-        viewModel = LandingViewModel(coreDataService: coreDataService as! CoreDataServiceProtocol,
-                                     apiService: apiService as! APIServiceProtocol)
-        delegate = TestClassLandingViewModelDelegate()
-        flowDelegate = TestClassCoordinatorFlowDelegate()
-
-        viewModel.delegate = delegate as? LandingViewModelDelegate
-        viewModel.flowDelegate = flowDelegate as? CoordinatorFlowDelegate
+        let viewModel = LandingViewModel(coreDataService: coreDataService,
+                                         apiService: apiService)
+        viewModel.delegate = delegate
+        viewModel.flowDelegate = flowDelegate
+        self.viewModel = viewModel
     }
 
     override func tearDown() {

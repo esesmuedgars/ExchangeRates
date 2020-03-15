@@ -110,12 +110,12 @@ enum Currency: String, Decodable {
         case .swedishKrona: return "Swedish Krona"
         case .singaporeDollar: return "Singapore Dollar"
         case .thaiBaht: return "Thai Baht"
-        case .unitedStatesDollar: return "United State Dollar"
+        case .unitedStatesDollar: return "United States Dollar"
         case .southAfricanRand: return "South African Rand"
         }
     }
 
     var code: String {
-        return rawValue
+        rawValue
     }
 }

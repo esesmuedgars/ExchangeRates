@@ -11,11 +11,11 @@ final class Dependencies {
 
     private let _apiService = APIService()
     var apiService: APIServiceProtocol {
-        return _apiService
+        _apiService
     }
 
     private let _coreDataService = CoreDataService()
     var coreDataService: CoreDataServiceProtocol {
-        return _coreDataService
+        _coreDataService
     }
 }

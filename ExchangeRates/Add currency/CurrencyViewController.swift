@@ -43,7 +43,7 @@ class CurrencyViewController: UIViewController, CurrencyViewModelDelegate, UITab
     // MARK: - UITableViewDataSource
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfCurrencies
+        viewModel.numberOfCurrencies
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

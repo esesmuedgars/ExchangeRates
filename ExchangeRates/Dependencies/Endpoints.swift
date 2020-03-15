@@ -11,7 +11,7 @@ enum Endpoint: String {
     case currencyRates = "revolut-ios"
 
     private var base: String {
-        return "https://europe-west1-revolut-230009.cloudfunctions.net"
+        "https://europe-west1-revolut-230009.cloudfunctions.net"
     }
 }
 
