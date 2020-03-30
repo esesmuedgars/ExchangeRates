@@ -16,7 +16,7 @@ API endpoint: https://europe-west1-revolut-230009.cloudfunctions.net/revolut-ios
     </tr>
         <td>pairs</td>
         <td>Number</td>
-        <td>Pair of currency codes to compare rates (eg. EURUSD - 1 Euro compared to United States dollar).</td>
+        <td>Pair of currency codes to compare rates (e.g. EURUSD - 1 Euro compared to United States dollar).</td>
     </tr>
 </table>
 
