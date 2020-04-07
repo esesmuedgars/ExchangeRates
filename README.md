@@ -9,6 +9,6 @@
 <img alt="Preview GIF" src="https://github.com/esesmuedgars/ExchangeRates/blob/assets/preview.gif" width="50%" />
 
 - [X] Every second executing fetch request to monitor live currency rate changes; 
-- [X] Using `CoreData` for currency pair persistance;
+- [X] Using `CoreData` for currency pair persistence;
 - [X] Unit tested critical business logic;
 - [X] Not using any third-party libraries.

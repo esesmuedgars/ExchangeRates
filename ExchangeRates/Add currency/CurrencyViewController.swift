@@ -56,7 +56,6 @@ class CurrencyViewController: UIViewController, CurrencyViewModelDelegate, UITab
         return cell
     }
 
-
     // MARK: - UITableViewDelegate
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

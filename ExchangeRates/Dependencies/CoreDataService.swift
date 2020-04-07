@@ -147,7 +147,7 @@ final class CoreDataService: CoreDataServiceProtocol {
 
 fileprivate extension NSManagedObject {
     func value(forKey key: ExchangeRate.Key) -> Any? {
-        return value(forKey: key.rawValue)
+        value(forKey: key.rawValue)
     }
 
     func setValue(_ value: Any?, forKey key: ExchangeRate.Key) {
